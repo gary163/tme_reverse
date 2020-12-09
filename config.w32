@@ -1,0 +1,7 @@
+ARG_ENABLE('tme_reverse', 'tme_reverse support', 'no');
+
+if (PHP_TME_REVERSE != 'no') {
+	AC_DEFINE('HAVE_TME_REVERSE', 1, 'tme_reverse support enabled');
+
+	EXTENSION('tme_reverse', 'tme_reverse.c', null, '/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1');
+}
