@@ -21,13 +21,13 @@ PHP_FUNCTION(tme_reverse)
 {
 	char   *in;
 	size_t len_in;
-	if(zend_parse_parameters(ZEND_NUM_ARGS(),"s", &in, &len_in == FAILURE)){
+	if(zend_parse_parameters(ZEND_NUM_ARGS(),"s", &in, &len_in) == FAILURE){
 		RETURN_FALSE;
 	}
 
 	//把字符串转成数组
 	char bytes[len_in+1];
-	strcpy(bytes, in)
+	strcpy(bytes, in);
 
 	//执行翻转
 	str_reverse(0, len_in-1, bytes);
