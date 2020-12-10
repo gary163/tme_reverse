@@ -16,9 +16,9 @@
 #endif
 
 //先声明
-void reverse(int left, int right, char bytes[])
+void reverse(int left, int right, char bytes[]);
 
-/* {{{ void tme_reverse_test1()
+/* {{{ void str_reverse()
  */
 PHP_FUNCTION(str_reverse)
 {
@@ -90,15 +90,6 @@ PHP_MINFO_FUNCTION(tme_reverse)
 }
 /* }}} */
 
-/* {{{ arginfo
- */
-ZEND_BEGIN_ARG_INFO(arginfo_tme_reverse_test1, 0)
-ZEND_END_ARG_INFO()
-
-ZEND_BEGIN_ARG_INFO(arginfo_tme_reverse_test2, 0)
-	ZEND_ARG_INFO(0, str)
-ZEND_END_ARG_INFO()
-/* }}} */
 
 /* {{{ tme_reverse_functions[]
  */
