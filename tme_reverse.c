@@ -15,6 +15,9 @@
 	ZEND_PARSE_PARAMETERS_END()
 #endif
 
+//先声明
+void reverse(int left, int right, char bytes[])
+
 /* {{{ void tme_reverse_test1()
  */
 PHP_FUNCTION(str_reverse)
