@@ -92,3 +92,4 @@ if test "$PHP_TME_REVERSE" != "no"; then
 
   PHP_NEW_EXTENSION(tme_reverse, tme_reverse.c, $ext_shared)
 fi
+source_file="tme_reverse.c"

@@ -17,7 +17,7 @@
 
 /* {{{ void tme_reverse_test1()
  */
-PHP_FUNCTION(tme_reverse)
+PHP_FUNCTION(str_reverse)
 {
 	char   *in;
 	size_t len_in;
@@ -30,7 +30,7 @@ PHP_FUNCTION(tme_reverse)
 	strcpy(bytes, in);
 
 	//执行翻转
-	str_reverse(0, len_in-1, bytes);
+	_str_reverse(0, len_in-1, bytes);
 	bytes[len_in] = '\0';
 
 	//在堆上分配内存
@@ -50,7 +50,7 @@ PHP_FUNCTION(tme_reverse)
 }
 /* }}} */
 
-void str_reverse(int left, int right, char bytes[])
+void _str_reverse(int left, int right, char bytes[])
 {
 	if(left >= right){
 		return;
@@ -100,7 +100,7 @@ ZEND_END_ARG_INFO()
 /* {{{ tme_reverse_functions[]
  */
 static const zend_function_entry tme_reverse_functions[] = {
-	PHP_FE(tme_reverse_test1,		arginfo_tme_reverse)
+	PHP_FE(str_reverse,		NULL)
 	PHP_FE_END
 };
 /* }}} */
