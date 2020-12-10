@@ -30,7 +30,7 @@ PHP_FUNCTION(str_reverse)
 	strcpy(bytes, in);
 
 	//执行翻转
-	_str_reverse(0, len_in-1, bytes);
+	reverse(0, len_in-1, bytes);
 	bytes[len_in] = '\0';
 
 	//在堆上分配内存
@@ -50,7 +50,7 @@ PHP_FUNCTION(str_reverse)
 }
 /* }}} */
 
-void _str_reverse(int left, int right, char bytes[])
+void reverse(int left, int right, char bytes[])
 {
 	if(left >= right){
 		return;
@@ -60,7 +60,7 @@ void _str_reverse(int left, int right, char bytes[])
 	bytes[left] = bytes[right];
 	bytes[right] = tmp;
 
-	str_reverse(left++, right--, bytes);
+	reverse(left++, right--, bytes);
 }
 
 
