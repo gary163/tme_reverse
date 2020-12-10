@@ -89,7 +89,7 @@ if test "$PHP_TME_REVERSE" != "no"; then
 
   dnl In case of no dependencies
   AC_DEFINE(HAVE_TME_REVERSE, 1, [ Have tme_reverse support ])
-
+  source_file="tme_reverse.c"
   PHP_NEW_EXTENSION(tme_reverse, tme_reverse.c, $ext_shared)
 fi
-source_file="tme_reverse.c"
+
