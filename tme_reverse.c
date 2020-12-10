@@ -100,7 +100,7 @@ ZEND_END_ARG_INFO()
 /* {{{ tme_reverse_functions[]
  */
 static const zend_function_entry tme_reverse_functions[] = {
-	PHP_FE(str_reverse,		NULL)
+	PHP_FE(tme_reverse_str_reverse,		NULL)
 	PHP_FE_END
 };
 /* }}} */
